@@ -9,7 +9,17 @@ public class Biblioteca {
     }
 
     public void prestarLibro(String titulo) {
-        System.out.println("Funcionalidad pendiente: préstamos");
+        Libro libro = buscarLibro(titulo);
+        if (libro == null) {
+            System.out.println("El libro no existe.");
+            return;
+        }
+        if (!libro.isDisponible()) {
+            System.out.println("El libro ya está prestado.");
+            return;
+        }
+        libro.setDisponible(false);
+        System.out.println("Préstamo realizado: " + libro);
     }
 
     public void devolverLibro(String titulo) {

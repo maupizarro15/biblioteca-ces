@@ -13,7 +13,17 @@ public class Biblioteca {
     }
 
     public void devolverLibro(String titulo) {
-        System.out.println("Funcionalidad pendiente: devoluciones");
+        Libro libro = buscarLibro(titulo);
+        if (libro == null) {
+            System.out.println("El libro no existe.");
+            return;
+        }
+        if (libro.isDisponible()) {
+            System.out.println("El libro no estaba prestado.");
+            return;
+        }
+        libro.setDisponible(true);
+        System.out.println("Devolución registrada: " + libro);
     }
 
     public void listarLibros() {

@@ -5,9 +5,12 @@ public class Biblioteca {
     private final List<Libro> libros = new ArrayList<>();
 
     public void registrarLibro(String titulo, String autor) {
-        System.out.println("Funcionalidad pendiente: registro de libros");
+        Libro libro = new Libro(titulo, autor);
+        libros.add(libro);
+        System.out.println("Libro registrado: " + libro);
     }
 
+    
     public void prestarLibro(String titulo) {
         System.out.println("Funcionalidad pendiente: préstamos");
     }

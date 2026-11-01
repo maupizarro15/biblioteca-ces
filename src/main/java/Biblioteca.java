@@ -57,4 +57,17 @@ public class Biblioteca {
         }
         return null;
     }
+
+    public void buscarPorTitulo(String texto) {
+        boolean encontrado = false;
+        for (Libro l : libros) {
+            if (l.getTitulo().contains(texto)) {
+                System.out.println("Encontrado: " + l);
+                encontrado = true;
+            }
+        }
+        if (!encontrado) {
+            System.out.println("Sin resultados para: " + texto);
+        }
+    }
 }

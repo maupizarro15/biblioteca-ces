@@ -15,6 +15,6 @@ public class Libro {
 
     @Override
     public String toString() {
-        return "[" + titulo + "] de " + autor;
+        return "[" + titulo + "] de " + autor + " (" + (disponible ? "disponible" : "prestado") + ")";
     }
 }

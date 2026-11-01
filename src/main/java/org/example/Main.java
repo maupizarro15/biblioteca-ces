@@ -34,6 +34,11 @@ public class Main {
                 case 4 -> biblioteca.listarLibros();
                 case 0 -> System.out.println("Hasta luego.");
                 default -> System.out.println("Opción inválida.");
+
+                case 5 -> {
+                    System.out.print("Texto a buscar: ");
+                    biblioteca.buscarPorTitulo(sc.nextLine());
+                }
             }
         } while (opcion != 0);
     }

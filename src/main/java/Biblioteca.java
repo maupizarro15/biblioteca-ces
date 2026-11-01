@@ -61,7 +61,8 @@ public class Biblioteca {
     public void buscarPorTitulo(String texto) {
         boolean encontrado = false;
         for (Libro l : libros) {
-            if (l.getTitulo().contains(texto)) {
+            // Cambio: convertir ambos a minúsculas antes de comparar
+            if (l.getTitulo().toLowerCase().contains(texto.toLowerCase())) {
                 System.out.println("Encontrado: " + l);
                 encontrado = true;
             }
